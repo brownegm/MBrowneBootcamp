@@ -48,4 +48,4 @@ counts_1000<-hist(mean_heights_1000,breaks = bins)$counts#|||||||||||||||
 
 barplot(rbind(counts_100,counts_1000), col=c(2,4),beside = T,xlab = "Height(inches)", ylab = "Count")
 #names.arg=seq(65,75,by=1)
-legend(6, 360, c("n=100", "n=1000"), col=c(2,4),pch=16)
+legend(5, 360, c("n=100", "n=1000"), col=c(2,4),pch=16)
