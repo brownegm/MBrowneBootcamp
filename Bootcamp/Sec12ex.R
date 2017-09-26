@@ -19,6 +19,7 @@ for (t in T) {
 
 plot(T,N)
 
+N <- numeric(length(T))
 for (t in 1:length(T)) {
   n <- a*n/(1+b*n)
   N[t] <- n
