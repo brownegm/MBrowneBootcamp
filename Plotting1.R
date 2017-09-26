@@ -46,6 +46,6 @@ par(mfrow=c(1,1), mar=c(4, 4, 3, 2)) #sets plotting area margins
 counts_100<-hist(mean_heights_100, breaks = bins)$counts# create vectors of counts in each histogram
 counts_1000<-hist(mean_heights_1000,breaks = bins)$counts#|||||||||||||||
 
-barplot(rbind(counts_100,counts_1000), col=c(2,4),beside = T,xlab = "Height(inches)", ylab = "Count")
-#names.arg=seq(65,75,by=1)
+barplot(rbind(counts_100,counts_1000), col=c(2,4),beside = T, xlab = "Average Height(inches)", ylab = "Count", names.arg=bins[1:16])
+#names.arg=bins[1:13]
 legend(5, 360, c("n=100", "n=1000"), col=c(2,4),pch=16)
