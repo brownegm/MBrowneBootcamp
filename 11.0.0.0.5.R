@@ -1,4 +1,4 @@
-###problem 11.0.0.0.5 
+###problem 11.0.0.0.5  and 11.0.0.0.6
 ##Use ?par to read about other plot control 
 ##parameters that can be set using par(). 
 ##Then draw a 2×2 set of plots, each showing the line y=5x+3 with 
@@ -24,3 +24,10 @@ plot(x,y,xlim=c(3,8))
 #longdash line style
 #par(lty=5)
 plot(x,y,xlim=c(3,8))
+
+#print plot to a file
+?dev.print()
+
+dev.print(device=file, width = 6, height = 6, horizontal = FALSE)
+
+
