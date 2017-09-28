@@ -63,5 +63,24 @@ for (i in 1:length(r)){
 plot(r,tk2, xlab = "Growth Rate(r)", ylab= expression(t[K/2]))
 print(tk2)
 
+## f
 
+# Define parameter values; use a vector to hold a range of values for the
+# parameter(s) you wish to vary.
+rr<-seq(from=0.5, to=1.0, by=0.1)
+kk<-seq(from=1000, to=1500, by=100)
+# Initialize a matrix to collect all outputs
+tk3<-matrix(nrow = length(kk),ncol=length(rr))
+
+# Use a for loop to repeatedly run the model and collect output
+
+for(i in 1:length(rr)){
+  for(ii in 1:length(kk)){
+     output<-rmodel(20,rr[i],kk[ii],10, figure =FALSE)
+  tk3[i,ii]<-output[10] 
+  }
+}
+
+# analyze results
+print(tk3)
 
