@@ -2,7 +2,7 @@
 
 ##Setup statments
 #Clear Workspace
-rm(ls())
+rm(list=ls())
 
 ## Input data, set parameter values, and/or set intial conditions
 
@@ -83,4 +83,10 @@ for(i in 1:length(rr)){
 
 # analyze results
 print(tk3)
+
+# Create a contour plot using "plotly" package
+library(plotly)
+plot <- plot_ly(z = ~tk3, type = "contour")
+
+
 
